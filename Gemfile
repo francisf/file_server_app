@@ -33,6 +33,10 @@ gem 'jbuilder', '~> 2.5'
 
 # For auth
 gem 'devise'
+
+# For file upload
+gem 'paperclip'
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'

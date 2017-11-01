@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= current_user.email %>
+</p>
+
+<%= link_to @blob.blob_data_file_name, @blob.blob_data.url %>
+<br>
+<%= link_to 'Edit', edit_blob_path(@blob) %> |
+<%= link_to 'Back', blobs_path %>

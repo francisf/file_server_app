@@ -1,0 +1,38 @@
+<% if !false %>
+<%= form_with(model: blob, local: true) do |form| %>
+  <% if blob.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(blob.errors.count, "error") %> prohibited this blob from being saved:</h2>
+
+      <ul>
+      <% blob.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= current_user.email %>
+    <!-- <%= form.number_field :user_id, id: :blob_user_id %> -->
+    <%= form.label :blob_data, "Upload file"%>
+    <%= form.file_field :blob_data %>
+  </div>
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+<% end %>
+
+<% if false %>
+<%= form_for @blob, :html => {:multipart => true}  do |f| %>
+  <p>
+    <%= f.label :blob_data %><br>
+    <%= f.file_field :blob_data %>
+  </p>
+  <%= f.submit "Upload" %>
+<% end %>
+<% end %>
