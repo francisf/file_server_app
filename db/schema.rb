@@ -34,6 +34,8 @@ ActiveRecord::Schema.define(version: 20171101103227) do
     t.datetime "last_sign_in_at"
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
+    t.string "phone"
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true

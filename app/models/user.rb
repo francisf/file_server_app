@@ -3,6 +3,6 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  attr_accessor :name, :phone
+  #attr_accessor :name, :phone
   has_many :blobs
 end
